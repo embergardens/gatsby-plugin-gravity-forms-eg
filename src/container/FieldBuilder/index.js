@@ -5,6 +5,7 @@ import Captcha from "../../components/Captcha";
 import Html from "../../components/Html";
 import Input from "../../components/Input";
 import Multiselect from "../../components/Multiselect";
+import NameField from "../../components/Name";
 import Select from "../../components/Select";
 import SelectorList from "../../components/SelectorList";
 import Textarea from "../../components/Textarea";
@@ -98,6 +99,18 @@ const FieldBuilder = ({
       case "PHONE":
         return (
           <Input
+            fieldData={field}
+            key={id}
+            gfId={id}
+            name={inputName}
+            defaultValue={defaultValue}
+            wrapClassName={inputWrapperClass}
+            wrapId={wrapId}
+          />
+        );
+      case "NAME":
+        return (
+          <NameField
             fieldData={field}
             key={id}
             gfId={id}
